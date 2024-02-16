@@ -1,0 +1,10 @@
+'import "pkg:/source/utils/config.bs"
+import "pkg:/source/api/sdk.bs"
+
+sub init()
+    m.top.functionName = "GetIntroTimestampsTask"
+end sub
+
+sub GetIntroTimestampsTask()
+    m.top.skipIntroParams = api.episode.GetIntroTimestamps(m.top.id)
+end sub

@@ -673,6 +673,10 @@
             <extracomment>Settings Menu - Title for option</extracomment>
         </message>
         <message>
+            <source>Skip Intro</source>
+            <translation>Skip Intro</translation>
+        </message>
+        <message>
             <source>Go directly to the episode list if a TV series has only one season.</source>
             <translation>Go directly to the episode list if a TV series has only one season.</translation>
             <extracomment>Settings Menu - Description for option</extracomment>

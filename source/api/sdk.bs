@@ -329,6 +329,14 @@ namespace api
         end function
     end namespace
 
+    namespace episode
+        ' Gets Intro Timestamps.
+        function GetIntroTimestamps(id as string)
+            req = APIRequest(Substitute("/episode/{0}/introtimestamps/v1", id))
+            return getJson(req)
+        end function
+    end namespace
+
     namespace fallbackFont
         ' Gets a list of available fallback font files.
         function GetFonts()

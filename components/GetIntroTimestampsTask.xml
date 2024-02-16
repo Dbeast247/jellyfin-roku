@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<component name="GetIntroTimestampsTask" extends="Task">
+    <interface>
+        <field id="Valid" type="bool" />
+        <field id="ShowSkipPromptAt" type="int" />
+        <field id="HideSkipPromptAt" type="int" />
+        <field id="IntroEnd" type="int" />
+        <field id="skipIntroParams" type="assocarray" />
+    </interface>
+</component>
