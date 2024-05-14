@@ -307,7 +307,7 @@
     </message>
     <message>
         <source>MPEG-4</source>
-        <translation type="unfinished">MPEG-4</translation>
+        <translation>MPEG-4</translation>
         <extracomment>Name of codec used in settings menu</extracomment>
     </message>
     <message>
@@ -804,6 +804,54 @@
         <source>...or enter server URL manually:</source>
         <translation>Si no aparece ningún servidor en la lista anterior, puede ingresar la URL manualmente:</translation>
         <extracomment>Instructions on initial app launch when the user is asked to manually enter a server URL</extracomment>
+    </message>
+    <message>
+        <source>Support Direct Play of MPEG-4 content. This may need to be disabled for playback of DIVX encoded video files.</source>
+        <translation>Perrmitir reproducción directa de contenido MPEG-4. Puede ser necesario desactivarlo para la reproducción de archivos de vídeo codificados en DIVX.</translation>
+        <extracomment>Settings Menu - Description for option</extracomment>
+    </message>
+    <message>
+        <source>Support Direct Play of MPEG-2 content (e.g., Live TV). This will prevent transcoding of MPEG-2 content, but uses significantly more bandwidth.</source>
+        <translation>Soporte para reproducción directa de contenido MPEG-2 (por ejemplo, TV en vivo). Esto evitará la transcodificación del contenido MPEG-2, pero utilizará un ancho de banda significativamente mayor.</translation>
+        <extracomment>Settings Menu - Description for option</extracomment>
+    </message>
+    <message>
+        <source>Blur Unwatched Episodes</source>
+        <translation>Ocultar Episodios No Vistos</translation>
+        <extracomment>Option Title in user setting screen</extracomment>
+    </message>
+    <message>
+        <source>Hide Taglines</source>
+        <translation>Ocultar Etiquetas</translation>
+        <extracomment>Option Title in user setting screen</extracomment>
+    </message>
+    <message>
+        <source>Options for TV Shows.</source>
+        <translation>Opciones para Series de Televisión.</translation>
+        <extracomment>Description for TV Shows user settings.</extracomment>
+    </message>
+    <message>
+        <source>Blur images of unwatched episodes.</source>
+        <translation type="unfinished">Ocultar imágenes de episodios sin ver.</translation>
+    </message>
+    <message>
+        <source>Hides tagline text on details pages.</source>
+        <translation type="unfinished">Ocultar texto de las etiquetas en las páginas de detalles.</translation>
+    </message>
+    <message>
+        <source>Use the replay button to slowly animate to the first item in the folder. (If disabled, the folder will reset to the first item immediately).</source>
+        <translation>Usa el botón de repetir para animar lentamente al primer elemento de la carpeta. (Si está deshabilitado, la carpeta se restablecerá al primer elemento inmediatamente).</translation>
+        <extracomment>Description for option in Setting Screen</extracomment>
+    </message>
+    <message>
+        <source>Go directly to the episode list if a TV series has only one season.</source>
+        <translation type="unfinished">Ir directamente a la lista de episodios si la serie tiene solo una temporada.</translation>
+        <extracomment>Settings Menu - Description for option</extracomment>
+    </message>
+    <message>
+        <source>Options that alter the design of Jellyfin.</source>
+        <translation>Opciones que alteran el diseño de Jellyfin.</translation>
+        <extracomment>Description for Design Elements user settings.</extracomment>
     </message>
 </context>
 <context>
