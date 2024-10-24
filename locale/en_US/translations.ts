@@ -1246,9 +1246,14 @@
             <extracomment>User Setting - Setting description</extracomment>
         </message>
         <message>
-            <source>What's New?</source>
-            <translation>What's New?</translation>
-            <extracomment>Popup title - Popup displays all the major changes to the app since the last version</extracomment>
+            <source>Welcome to version</source>
+            <translation>Welcome to version</translation>
+            <extracomment>WhatsNewDialog title - Welcome to version 2.0.0</extracomment>
+        </message>
+        <message>
+            <source>To view a complete list of changes visit</source>
+            <translation>To view a complete list of changes visit</translation>
+            <extracomment>WhatsNewDialog body text preceding the changelog URL</extracomment>
         </message>
         <message>
             <source>Random</source>
@@ -1269,6 +1274,106 @@
             <source>Ratings for how good a movie is</source>
             <translation>Ratings for how good a movie is</translation>
             <extracomment>User Setting - Setting description</extracomment>
+        </message>
+        <message>
+            <source>View All Next Up</source>
+            <translation>View All Next Up</translation>
+            <extracomment>Title for viewing all episodes available in the Next Up section</extracomment>
+        </message>
+        <message>
+            <source>Rewatching Next Up</source>
+            <translation>Rewatching Next Up</translation>
+            <extracomment>User Setting - Setting title</extracomment>
+        </message>
+        <message>
+            <source>Show already watched episodes in 'Next Up' sections.</source>
+            <translation>Show already watched episodes in 'Next Up' sections.</translation>
+            <extracomment>User Setting - Setting description</extracomment>
+        </message>
+        <message>
+            <source>Play Next Episode Automatically</source>
+            <translation>Play Next Episode Automatically</translation>
+            <extracomment>User Setting - Setting title</extracomment>
+        </message>
+        <message>
+            <source>When finished playing a single episode, play the next one automatically.</source>
+            <translation>When finished playing a single episode, play the next one automatically.</translation>
+            <extracomment>User Setting - Setting description</extracomment>
+        </message>
+        <message>
+            <source>Episode Images Next Up</source>
+            <translation>Episode Images Next Up</translation>
+            <extracomment>User Setting - Setting title</extracomment>
+        </message>
+        <message>
+            <source>What type of images to use for Episodes shown in the 'Next Up' and 'Continue Watching' sections.</source>
+            <translation>What type of images to use for Episodes shown in the 'Next Up' and 'Continue Watching' sections.</translation>
+            <extracomment>User Setting - Setting description</extracomment>
+        </message>
+        <message>
+            <source>Use Web Client Setting</source>
+            <translation>Use Web Client Setting</translation>
+            <extracomment>User Setting - Setting option title</extracomment>
+        </message>
+        <message>
+            <source>Use Episode Image</source>
+            <translation>Use Episode Image</translation>
+            <extracomment>User Setting - Setting option title</extracomment>
+        </message>
+        <message>
+            <source>Use Show Image</source>
+            <translation>Use Show Image</translation>
+            <extracomment>User Setting - Setting option title</extracomment>
+        </message>
+        <message>
+            <source>Episode Next Up Behavior</source>
+            <translation>Episode Next Up Behavior</translation>
+            <extracomment>User Setting - Setting option title</extracomment>
+        </message>
+        <message>
+            <source>This controls what clicking OK on a Next Up episode does.</source>
+            <translation>This controls what clicking OK on a Next Up episode does.</translation>
+            <extracomment>User Setting - Setting description</extracomment>
+        </message>
+        <message>
+            <source>View Episode Details</source>
+            <translation>View Episode Details</translation>
+            <extracomment>User Setting - Setting option title</extracomment>
+        </message>
+        <message>
+            <source>View Season Details</source>
+            <translation>View Season Details</translation>
+            <extracomment>User Setting - Setting option title</extracomment>
+        </message>
+        <message>
+            <source>OSD Remaining Time</source>
+            <translation>OSD Remaining Time</translation>
+            <extracomment>User Setting - Setting option title</extracomment>
+        </message>
+        <message>
+            <source>How is remaining time represented. Remaining time shows hours, minutes, and seconds remaining. Time of day shows what time the video will complete.</source>
+            <translation>How is remaining time represented. Remaining time shows hours, minutes, and seconds remaining. Time of day shows what time the video will complete.</translation>
+            <extracomment>User Setting - Setting description</extracomment>
+        </message>
+        <message>
+            <source>Remaining Time</source>
+            <translation>Remaining Time</translation>
+            <extracomment>User Setting - Setting option title</extracomment>
+        </message>
+        <message>
+            <source>Time of Day</source>
+            <translation>Time of Day</translation>
+            <extracomment>User Setting - Setting option title</extracomment>
+        </message>
+        <message>
+            <source>Both</source>
+            <translation>Both</translation>
+            <extracomment>User Setting - Setting option title</extracomment>
+        </message>
+        <message>
+            <source>Special</source>
+            <translation>Special</translation>
+            <extracomment>Special episode of a TV Show</extracomment>
         </message>
     </context>
 </TS>

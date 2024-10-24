@@ -42,9 +42,10 @@ function LoginFlow()
         SendPerformanceBeacon("AppDialogInitiate") ' Roku Performance monitoring - Dialog Starting
 
         publicUsers = GetPublicUsers()
-        savedUsers = getSavedUsers()
+        numPubUsers = 0
+        if isValid(publicUsers) then numPubUsers = publicUsers.count()
 
-        numPubUsers = publicUsers.count()
+        savedUsers = getSavedUsers()
         numSavedUsers = savedUsers.count()
 
         if numPubUsers > 0 or numSavedUsers > 0
@@ -602,6 +603,7 @@ function CreateMovieDetailsGroup(movie as object) as dynamic
     ' start building MovieDetails view
     group = CreateObject("roSGNode", "MovieDetails")
     group.observeField("quickPlayNode", m.port)
+    group.observeField("refreshMovieDetailsData", m.port)
     group.overhangTitle = movie.title
     group.optionsAvailable = false
     group.trailerAvailable = false
@@ -642,9 +644,9 @@ function CreateSeriesDetailsGroup(seriesID as string) as dynamic
     ' Get season data early in the function so we can check number of seasons.
     seasonData = TVSeasons(seriesID)
     ' Divert to season details if user setting goStraightToEpisodeListing is enabled and only one season exists.
-    if m.global.session.user.settings["ui.tvshows.goStraightToEpisodeListing"] = true and seasonData.Items.Count() = 1
+    if seasonData <> invalid and m.global.session.user.settings["ui.tvshows.goStraightToEpisodeListing"] and seasonData.Items.Count() = 1
         stopLoadingSpinner()
-        return CreateSeasonDetailsGroupByID(seriesID, seasonData.Items[0].id)
+        return CreateSeasonDetailsGroupByID(seriesID, seasonData.Items[0].id, "")
     end if
     ' start building SeriesDetails view
     group = CreateObject("roSGNode", "TVShowDetails")
@@ -781,6 +783,8 @@ function CreateSeasonDetailsGroup(series as object, season as object) as dynamic
     group.episodeObjects = group.objects
     group.extrasObjects = TVSeasonExtras(season.id)
 
+    group.observeField("refreshSeasonDetailsData", m.port)
+
     ' watch for button presses
     group.observeField("selectedItem", m.port)
     group.observeField("quickPlayNode", m.port)
@@ -789,7 +793,7 @@ function CreateSeasonDetailsGroup(series as object, season as object) as dynamic
     return group
 end function
 
-function CreateSeasonDetailsGroupByID(seriesID as string, seasonID as string) as dynamic
+function CreateSeasonDetailsGroupByID(seriesID as string, seasonID as string, selectId as string) as dynamic
     ' validate parameters
     if seriesID = "" or seasonID = "" then return invalid
 
@@ -801,9 +805,11 @@ function CreateSeasonDetailsGroupByID(seriesID as string, seasonID as string) as
         stopLoadingSpinner()
         return invalid
     end if
+
     ' start building SeasonDetails view
     group = CreateObject("roSGNode", "TVEpisodes")
     group.optionsAvailable = false
+
     ' push scene asap (to prevent extra button presses when retriving series/movie info)
     group.seasonData = seasonMetaData.json
     group.objects = TVEpisodes(seriesID, seasonID)
@@ -816,6 +822,10 @@ function CreateSeasonDetailsGroupByID(seriesID as string, seasonID as string) as
     m.global.sceneManager.callFunc("pushScene", group)
     ' check for specials/extras for this season
     group.extrasObjects = TVSeasonExtras(seasonID)
+
+    group.observeField("sceneReady", "onSceneReady")
+
+    group.selectItemId = selectId
 
     ' finished building SeasonDetails view
     return group

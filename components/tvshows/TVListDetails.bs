@@ -21,13 +21,16 @@ end sub
 sub itemContentChanged()
     item = m.top.itemContent
     itemData = item.json
+    userSettings = m.global.session.user.settings
 
     ' Set default video source if user hasn't selected one yet
     if item.selectedVideoStreamId = "" and isValid(itemData.MediaSources)
         item.selectedVideoStreamId = itemData.MediaSources[0].id
     end if
 
-    if isValid(itemData.indexNumber)
+    if isValid(itemData.parentIndexNumber) and itemData.parentIndexNumber = 0
+        indexNumber = `${tr("Special")} - `
+    else if isValid(itemData.indexNumber)
         indexNumber = `${itemData.indexNumber}. `
         if isValid(itemData.indexNumberEnd)
             indexNumber = `${itemData.indexNumber}-${itemData.indexNumberEnd}. `
@@ -46,7 +49,7 @@ sub itemContentChanged()
 
     imageUrl = item.posterURL
 
-    if m.global.session.user.settings["ui.tvshows.blurunwatched"] = true
+    if userSettings["ui.tvshows.blurunwatched"] = true
         if itemData.lookup("Type") = "Episode"
             if not itemData.userdata.played
                 imageUrl = imageUrl + "&blur=15"
@@ -64,12 +67,12 @@ sub itemContentChanged()
             m.top.findNode("runtime").text = stri(runTime).trim() + " mins"
         end if
 
-        if m.global.session.user.settings["ui.design.hideclock"] <> true
+        if userSettings["ui.design.hideclock"] <> true
             m.top.findNode("endtime").text = tr("Ends at %1").Replace("%1", getEndTime())
         end if
     end if
 
-    if m.global.session.user.settings["ui.tvshows.disableCommunityRating"] = false
+    if userSettings["ui.tvshows.disableCommunityRating"] = false
         if isValid(itemData.communityRating)
             m.top.findNode("star").visible = true
             m.top.findNode("communityRating").text = str(int(itemData.communityRating * 10) / 10)
@@ -84,6 +87,8 @@ sub itemContentChanged()
     ' Add checkmark in corner (if applicable)
     if isValid(itemData.UserData) and isValid(itemData.UserData.Played) and itemData.UserData.Played = true
         m.playedIndicator.visible = true
+    else
+        m.playedIndicator.visible = false
     end if
 
     ' Add progress bar on bottom (if applicable)
@@ -93,6 +98,9 @@ sub itemContentChanged()
         progressWidthInPixels = int(m.progressBackground.width * itemData.UserData.PlayedPercentage / 100)
         m.progressBar.width = progressWidthInPixels
         m.progressBar.visible = true
+    else
+        m.progressBackground.visible = false
+        m.progressBar.visible = false
     end if
 
     ' Display current video_codec and check if there is more than one video to choose from...
