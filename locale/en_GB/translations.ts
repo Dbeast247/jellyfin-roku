@@ -1326,6 +1326,66 @@
         <source>Special</source>
         <translation>Special</translation>
     </message>
+    <message>
+        <source>How is remaining time represented. Remaining time shows hours, minutes, and seconds remaining. Time of day shows what time the video will complete.</source>
+        <translation>How is remaining time represented. Remaining time shows hours, minutes, and seconds remaining. Time of day shows what time the video will complete.</translation>
+    </message>
+    <message>
+        <source>Episode Next Up Behavior</source>
+        <translation>Episode Next Up Behaviour</translation>
+    </message>
+    <message>
+        <source>This controls what clicking OK on a Next Up episode does.</source>
+        <translation>This controls what clicking OK on a Next Up episode does.</translation>
+    </message>
+    <message>
+        <source>View Episode Details</source>
+        <translation>View Episode Details</translation>
+    </message>
+    <message>
+        <source>View Season Details</source>
+        <translation>View Season Details</translation>
+    </message>
+    <message>
+        <source>OSD Remaining Time</source>
+        <translation>OSD Remaining Time</translation>
+    </message>
+    <message>
+        <source>Remaining Time</source>
+        <translation>Remaining Time</translation>
+    </message>
+    <message>
+        <source>Time of Day</source>
+        <translation>Time of Day</translation>
+    </message>
+    <message>
+        <source>Both</source>
+        <translation>Both</translation>
+    </message>
+    <message>
+        <source>Choose how rows are displayed on the home screen.</source>
+        <translation>Choose how rows are displayed on the home screen.</translation>
+    </message>
+    <message>
+        <source>N/A</source>
+        <translation>N/A</translation>
+    </message>
+    <message>
+        <source>Row Layout</source>
+        <translation>Row Layout</translation>
+    </message>
+    <message>
+        <source>Original</source>
+        <translation>Original</translation>
+    </message>
+    <message>
+        <source>Full Width</source>
+        <translation>Full Width</translation>
+    </message>
+    <message>
+        <source>CH</source>
+        <translation>CH</translation>
+    </message>
 </context>
 <context>
     <name></name>
